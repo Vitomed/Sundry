@@ -1,0 +1,8 @@
+from typing import List
+
+def contains_1(list_1: List[int], list_2: List[int]) -> bool:
+    return any(x not in list_1 for x in list_2)
+    
+def contains_2(list_1: List[int], list_2: List[int]) -> bool:
+    if set(list_1).difference(set(list_2)):
+        return True
