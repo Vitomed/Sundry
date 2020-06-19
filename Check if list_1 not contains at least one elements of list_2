@@ -1,5 +1,6 @@
 from typing import List, Optional
 
+
 def contains_1(list_1: List[int], list_2: List[int]) -> bool:
     return any(x not in list_1 for x in list_2)
     
