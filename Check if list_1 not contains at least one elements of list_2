@@ -1,8 +1,17 @@
-from typing import List
+from typing import List, Optional
 
 def contains_1(list_1: List[int], list_2: List[int]) -> bool:
     return any(x not in list_1 for x in list_2)
     
-def contains_2(list_1: List[int], list_2: List[int]) -> bool:
+
+def contains_2(list_1: List[int], list_2: List[int]) -> Optional[bool]:
     if set(list_1).difference(set(list_2)):
         return True
+        
+
+def contains_3(list_1: List[int], list_2: List[int]) -> Optional[bool]:
+    for x in list_1:
+        for y in list_2:
+            if x == y:
+                return True
+
