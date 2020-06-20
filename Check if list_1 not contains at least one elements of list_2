@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, NoReturn, Optional
 
 
 def contains_1(list_1: List[int], list_2: List[int]) -> bool:
@@ -15,4 +15,10 @@ def contains_3(list_1: List[int], list_2: List[int]) -> Optional[bool]:
         for y in list_2:
             if x == y:
                 return True
+            
+            
+def contains_4(list_1: List[int], list_2: List[int]) -> Optional[NoReturn]:
+    for x in list_1:
+        if x not in set(list_2):
+            raise
 
